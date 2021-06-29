@@ -8,22 +8,12 @@ public class TimelineManager : MonoBehaviour
     public float incrementDelay;
     private float currentIncrementDelay;
 
-    private int timelineIndex;
+    public int timelineIndex;
 
     private void Awake()
     {
         timelineIndex = 0;
         currentIncrementDelay = incrementDelay;
-    }
-
-    private void Update()
-    {
-        currentIncrementDelay -= Time.deltaTime;
-        if(currentIncrementDelay <= 0)
-        {
-            IncrementTimeline();
-            currentIncrementDelay = incrementDelay;
-        }
     }
 
     public void IncrementTimeline()
@@ -43,5 +33,17 @@ public class TimelineManager : MonoBehaviour
         }
 
         timeline[timelineIndex].GetComponent<Image>().enabled = true;
+    }
+
+    public void ManageTimeline()
+    {
+        currentIncrementDelay -= Time.deltaTime;
+        if (currentIncrementDelay <= 0)
+        {
+            GameManager.gm.activeSpell.Cast();
+            Mage.mage.PlayAttackAnim();
+            IncrementTimeline();
+            currentIncrementDelay = incrementDelay;
+        }
     }
 }
