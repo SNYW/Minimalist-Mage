@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public TimelineManager timelineManager;
     public SpellSetManager spellset;
     public SpawnManager spawnManager;
+    public EconomyManager economy;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         timelineManager = GetComponent<TimelineManager>();
         spellset = GetComponent<SpellSetManager>();
         spawnManager = GetComponent<SpawnManager>();
+        economy = GetComponent<EconomyManager>();
         activeEnemies = new List<GameObject>();
     }
 
