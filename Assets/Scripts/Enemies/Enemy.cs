@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public int level;
+    public int killGems;
+    public GameObject gem;
     public int maxHp;
     public int hp;
     public float range;
@@ -64,6 +67,16 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         GameManager.gm.activeEnemies.Remove(gameObject);
+        GameManager.gm.economy.AddMoney(killGems);
+
+        for (int i = 0; i < killGems; i++)
+        {
+           var g =  Instantiate(gem, transform.position, Quaternion.identity);
+            g.transform.eulerAngles = new Vector3(g.transform.eulerAngles.x,g.transform.eulerAngles.y , Random.Range(0, 360));
+            var grb = g.GetComponent<Rigidbody2D>();
+            grb.AddForce(g.transform.forward+Vector3.up*2 , ForceMode2D.Impulse);
+            grb.AddTorque(Random.Range(0.1f,0.5f), ForceMode2D.Impulse);
+        }
         Destroy(gameObject);
     }
 }

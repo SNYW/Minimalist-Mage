@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.0294, y: -0.624}
-  m_SizeDelta: {x: -1.5483, y: -2.8112}
+  m_AnchoredPosition: {x: -1.0452, y: -0.62399995}
+  m_SizeDelta: {x: -1.5267, y: -2.8112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1232233685
 CanvasRenderer:
@@ -596,6 +596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b59b6a76b6b60248b27b7318b0eb7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  killGems: 10
+  gem: {fileID: 1624201923042034702, guid: 783c40e1d4becfb40a204823fd4696a2, type: 3}
   maxHp: 10
   hp: 10
   range: 1.34
