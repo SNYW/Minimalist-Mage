@@ -661,10 +661,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4b220628dd6d742afa6b96fdb759d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timelineManager: {fileID: 0}
-  spellset: {fileID: 0}
+  attackX: 7
   activeSpell: {fileID: 0}
   activeEnemies: []
+  timelineManager: {fileID: 0}
+  spellset: {fileID: 0}
+  spawnManager: {fileID: 0}
 --- !u!114 &485552991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e29b5f322b768b429d5e4dd17553c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCooldown: 3
+  spawnCooldown: 4
   spawnX: 10
   spawnPool:
   - {fileID: 3084486516098798370, guid: ba02cfc082d26174095cbfd36de929fc, type: 3}
@@ -2136,7 +2138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084486516098798369, guid: ba02cfc082d26174095cbfd36de929fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.8
+      value: 7.19
       objectReference: {fileID: 0}
     - target: {fileID: 3084486516098798369, guid: ba02cfc082d26174095cbfd36de929fc, type: 3}
       propertyPath: m_LocalPosition.y

@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
     private SpellSlot activeSpellSlot;
+    public float attackX;
     public Spell activeSpell;
     public List<GameObject> activeEnemies;
 
@@ -32,7 +33,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        spawnManager.ManageSpawn();
+
         if(GetClosestEnemy() != null)
         {
             timelineManager.ManageTimeline();
@@ -44,7 +46,14 @@ public class GameManager : MonoBehaviour
     {
         if (activeEnemies.Count > 0)
         {
-            return CalcClosestEnemy();
+            if(CalcClosestEnemy().transform.position.x < attackX)
+            {
+                return CalcClosestEnemy();
+            }
+            else
+            {
+                return null;
+            }
         }
         else
         {
