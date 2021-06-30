@@ -5,9 +5,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gm;
     private SpellSlot activeSpellSlot;
+    public bool playing;
     public float attackX;
     public Spell activeSpell;
     public List<GameObject> activeEnemies;
+    public Animator fadeInPanel;
 
     //Managers
     public TimelineManager timelineManager;
@@ -24,7 +26,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
-
+        playing = false;
+        fadeInPanel.Play("MainMenuFadeIn");
         timelineManager = GetComponent<TimelineManager>();
         spellset = GetComponent<SpellSetManager>();
         spawnManager = GetComponent<SpawnManager>();
@@ -33,15 +36,18 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        spawnManager.ManageSpawn();
-
-        if(GetClosestEnemy() != null)
+        if (playing)
         {
-            timelineManager.ManageTimeline();
-            activeSpellSlot = spellset.GetSpellSlot(timelineManager.timelineIndex);
-            activeSpell = spellset.GetSpell(timelineManager.timelineIndex);
+            if (GetClosestEnemy() != null)
+            {
+                timelineManager.ManageTimeline();
+                activeSpellSlot = spellset.GetSpellSlot(timelineManager.timelineIndex);
+                activeSpell = spellset.GetSpell(timelineManager.timelineIndex);
+            }
+            spawnManager.ManageSpawn();
         }
     }
+
     public Enemy GetClosestEnemy()
     {
         if (activeEnemies.Count > 0)
@@ -72,5 +78,10 @@ public class GameManager : MonoBehaviour
             }
         }
         return obj.GetComponent<Enemy>();
+    }
+
+    public void StartRun()
+    {
+        playing = true;
     }
 }

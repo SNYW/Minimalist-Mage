@@ -23,17 +23,20 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(hp <= 0)
+        if (GameManager.gm.playing)
         {
-            Die();
-        }
+            if (hp <= 0)
+            {
+                Die();
+            }
 
-        canAttack = CanAttack();
-        animator.SetBool("attacking", canAttack);
+            canAttack = CanAttack();
+            animator.SetBool("attacking", canAttack);
 
-        if (!canAttack)
-        {
-            transform.Translate((Vector3)Vector2.left*moveSpeed*Time.deltaTime);
+            if (!canAttack)
+            {
+                transform.Translate((Vector3)Vector2.left * moveSpeed * Time.deltaTime);
+            }
         }
     }
 
