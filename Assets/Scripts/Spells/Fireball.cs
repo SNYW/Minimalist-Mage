@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Fireball", menuName = "Spells/Fireball")]
 public class Fireball : Spell
 {
     public override void Cast()

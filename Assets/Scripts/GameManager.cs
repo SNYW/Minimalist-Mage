@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Spell activeSpell;
     public List<GameObject> activeEnemies;
     public Animator fadeInPanel;
+    public CombatText combatText;
 
     //Managers
     public TimelineManager timelineManager;

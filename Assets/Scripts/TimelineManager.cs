@@ -40,7 +40,10 @@ public class TimelineManager : MonoBehaviour
         currentIncrementDelay -= Time.deltaTime;
         if (currentIncrementDelay <= 0)
         {
-            GameManager.gm.activeSpell.Cast();
+            Spell s = GameManager.gm.activeSpell;
+            GameManager.gm.combatText.UpdateSpellText(s.name);
+            Debug.Log("Cast: "+s.name);
+            s.Cast();
             Mage.mage.PlayAttackAnim();
             IncrementTimeline();
             currentIncrementDelay = incrementDelay;
