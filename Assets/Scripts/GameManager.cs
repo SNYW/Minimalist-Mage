@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public List<GameObject> activeEnemies;
     public Animator fadeInPanel;
     public CombatText combatText;
+    public int gameLevel;
+    public float levelSpeed;
+    private float gameLevelIncrement;
 
     //Managers
     public TimelineManager timelineManager;
@@ -39,6 +42,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        gameLevelIncrement += Time.deltaTime * levelSpeed;
+        gameLevel = (int)gameLevelIncrement;
+
         if (playing)
         {
             if (GetClosestEnemy() != null)

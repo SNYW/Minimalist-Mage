@@ -2,26 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
     public int level;
     public int killGems;
     public GameObject gem;
+    public int baseHp;
     public int maxHp;
     public int hp;
     public float range;
     public int damage;
+
+    //Level Scaling
+    public float healthScaleFactor;
+    public float moneyScaleFactor;
+
+
     public float moveSpeed;
     private bool canAttack;
     private Animator animator;
     public Image healthBar;
+    public TMP_Text levelText;
+    public TMP_Text healthText;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         hp = maxHp;
         healthBar.fillAmount = 1;
+        levelText.text = level.ToString();
     }
 
     private void Update()
@@ -62,6 +73,7 @@ public class Enemy : MonoBehaviour
             hp -= damage;
         }
         healthBar.fillAmount = (float)hp / maxHp;
+        healthText.text = hp + "/" + maxHp;
     }
 
     private void Die()
@@ -78,5 +90,20 @@ public class Enemy : MonoBehaviour
             grb.AddTorque(Random.Range(0.1f,0.5f), ForceMode2D.Impulse);
         }
         Destroy(gameObject);
+    }
+
+    public void SetLevel(int i)
+    {
+        level = i;
+        levelText.text = level.ToString();
+
+        var healthBuff = baseHp + level * healthScaleFactor;
+        maxHp += (int)healthBuff;
+        hp = maxHp;
+        healthText.text = hp + "/" + maxHp;
+
+
+        var gemBuff = killGems + level * healthScaleFactor;
+        killGems = (int)gemBuff;
     }
 }

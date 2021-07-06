@@ -42,7 +42,7 @@ public class TimelineManager : MonoBehaviour
         {
             Spell s = GameManager.gm.activeSpell;
             GameManager.gm.combatText.UpdateSpellText(s.name);
-            Debug.Log("Cast: "+s.name);
+            //Debug.Log("Cast: "+s.name);
             s.Cast();
             Mage.mage.PlayAttackAnim();
             IncrementTimeline();

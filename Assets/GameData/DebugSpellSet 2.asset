@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 350f84cb08e7f954e87aa8a50b3b45d2, type: 3}
-  m_Name: DebugSpellSet
+  m_Name: DebugSpellSet 2
   m_EditorClassIdentifier: 
   spells:
-  - {fileID: 11400000, guid: 332b82b3d7610c04f996109dd22ebdb3, type: 2}
-  - {fileID: 11400000, guid: 332b82b3d7610c04f996109dd22ebdb3, type: 2}
-  - {fileID: 11400000, guid: 332b82b3d7610c04f996109dd22ebdb3, type: 2}
-  - {fileID: 11400000, guid: 332b82b3d7610c04f996109dd22ebdb3, type: 2}
-  - {fileID: 11400000, guid: 332b82b3d7610c04f996109dd22ebdb3, type: 2}
+  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
