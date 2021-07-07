@@ -24,6 +24,7 @@ public class EconomyManager : MonoBehaviour
 
     public bool Spend(int amount)
     {
+        Debug.Log(currentMoney - amount >= 0);
         if(currentMoney - amount >= 0)
         {
             currentMoney -= amount;

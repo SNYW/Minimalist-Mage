@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public SpellSetManager spellset;
     public SpawnManager spawnManager;
     public EconomyManager economy;
+    public ShopManager shop;
 
     private void Awake()
     {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         spawnManager = GetComponent<SpawnManager>();
         economy = GetComponent<EconomyManager>();
         activeEnemies = new List<GameObject>();
+        shop = GetComponent<ShopManager>();
     }
 
     private void Update()
