@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "IcyRain", menuName = "Spells/IcyRain")]
 public class IcyRain : Spell
 {
+    public Debuff debuff;
     public override void Cast()
     {
         var all = GameManager.gm.activeEnemies.ToArray();
@@ -12,7 +13,9 @@ public class IcyRain : Spell
         {
             if(g != null)
             {
-                g.GetComponent<Enemy>().TakeDamage(damage);
+                var enemy = g.GetComponent<Enemy>();
+                enemy.debuffManager.AddDebuff(debuff,g.gameObject);
+                enemy.TakeDamage(damage);
             }
         }
     }

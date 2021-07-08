@@ -8,6 +8,7 @@ public class Spell : ScriptableObject
     public int damage;
     public Sprite uiSprite;
     public int cost;
+    public GameObject effectObject;
 
     public virtual void Cast() { }
 }

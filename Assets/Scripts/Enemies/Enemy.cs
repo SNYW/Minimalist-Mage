@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public int baseHp;
     public int maxHp;
     public int hp;
+    public float baseMoveSpeed;
+    public float currentMoveSpeed;
     public float range;
     public int damage;
 
@@ -19,17 +21,18 @@ public class Enemy : MonoBehaviour
     public float healthScaleFactor;
     public float moneyScaleFactor;
 
-
-    public float moveSpeed;
+    //Management
     private bool canAttack;
     private Animator animator;
     public Image healthBar;
     public TMP_Text levelText;
     public TMP_Text healthText;
+    public DebuffManager debuffManager;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        currentMoveSpeed = baseMoveSpeed;
         hp = maxHp;
         healthBar.fillAmount = 1;
         levelText.text = level.ToString();
@@ -49,7 +52,7 @@ public class Enemy : MonoBehaviour
 
             if (!canAttack)
             {
-                transform.Translate((Vector3)Vector2.left * moveSpeed * Time.deltaTime);
+                transform.Translate((Vector3)Vector2.left * currentMoveSpeed * Time.deltaTime);
             }
         }
     }

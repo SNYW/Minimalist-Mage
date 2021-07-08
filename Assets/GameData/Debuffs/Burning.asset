@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeed3fde1bc3f184ebd45de7d99a2cd2, type: 3}
-  m_Name: IcyRain
+  m_Script: {fileID: 11500000, guid: 30715fddfb805bd449613b980ecb2526, type: 3}
+  m_Name: Burning
   m_EditorClassIdentifier: 
-  name: Icy Rain
-  description: Deal 10 Frost Damage to all Enemies
-  damage: 1
-  uiSprite: {fileID: 21300000, guid: f14703c8e03496c4bbbadaa7bc1f79cd, type: 3}
-  cost: 1
-  effectObject: {fileID: 0}
+  name: Burning
+  stackable: 0
+  duration: 5
+  icon: {fileID: 21300000, guid: aeca726ca08cb5f43a4e1e48c473b5c0, type: 3}
