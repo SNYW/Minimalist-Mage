@@ -6,11 +6,6 @@ public class SpellSlot : MonoBehaviour
     public Spell spell;
     public Image spellIcon;
 
-    private void Awake()
-    {
-        spellIcon.sprite = spell.uiSprite;
-    }
-
     public void OpenSpellBook()
     {
         GameManager.gm.spellset.OpenSpellBook(this);

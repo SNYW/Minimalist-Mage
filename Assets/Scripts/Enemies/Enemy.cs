@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
     public TMP_Text levelText;
     public TMP_Text healthText;
     public DebuffManager debuffManager;
+    public GameObject combatTextObj;
+    public Transform combatTextAnchor;
+    public CombatTextManager ctm;
 
     private void Awake()
     {
@@ -77,6 +80,14 @@ public class Enemy : MonoBehaviour
         }
         healthBar.fillAmount = (float)hp / maxHp;
         healthText.text = hp + "/" + maxHp;
+    }
+
+    public void CreateCombatText(string text)
+    {
+        var textObj = Instantiate(combatTextObj, combatTextAnchor.position, Quaternion.identity).GetComponent<CombatText>();
+        textObj.transform.parent = combatTextAnchor;
+        textObj.CreateCombatTextRequest(text, 0.3f, true);
+        ctm.AddTextRequest(textObj);
     }
 
     private void Die()

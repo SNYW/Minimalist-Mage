@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ade1c00cba8ea2c44b06ca1a93466580, type: 3}
+  m_Script: {fileID: 11500000, guid: 04e9daa1f229e3342b38cae6dff06176, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
   name: Fireball
-  description: Deal 4 Fire Damage to the closest enemy
-  damage: 0
+  description: Deal 10 Damage to the closest enemy and apply [Burning]
+  damage: 5
   uiSprite: {fileID: 21300000, guid: aeca726ca08cb5f43a4e1e48c473b5c0, type: 3}
-  cost: 1
+  cost: 10
   effectObject: {fileID: 0}
-  debuff: {fileID: 11400000, guid: 32b6a176275b0f744adbd4df83b04d7b, type: 2}
+  debuff: {fileID: 11400000, guid: e5948a0cd0938934a8b0e9ece4edec27, type: 2}
+  maxTargets: 1

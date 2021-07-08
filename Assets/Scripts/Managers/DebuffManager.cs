@@ -29,6 +29,24 @@ public class DebuffManager : MonoBehaviour
             var ds = Instantiate(slotObject, transform).GetComponent<DebuffSlot>();
             ds.SetDebuff(g, target, this);
             activeSlots.Add(ds);
+            target.GetComponent<Enemy>().CreateCombatText("+" + g.name+"!");
+        }
+        else
+        {
+            foreach (DebuffSlot ds in activeSlots.ToArray())
+            {
+                if (ds.debuff.name == g.name)
+                {
+                    if (g.stackable)
+                    {
+                        ds.AddStacks(1);
+                    }
+                    else
+                    {
+                        ds.Refresh();
+                    }
+                }
+            }
         }
     }
 
@@ -43,7 +61,7 @@ public class DebuffManager : MonoBehaviour
         {
             if(currentTickTime <= 0)
             {
-                foreach(DebuffSlot ds in activeSlots)
+                foreach(DebuffSlot ds in activeSlots.ToArray())
                 {
                     ds.Tick();
                 }

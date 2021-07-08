@@ -378,6 +378,7 @@ RectTransform:
   - {fileID: 8210745227382465940}
   - {fileID: 323158664}
   - {fileID: 1328005415}
+  - {fileID: 5239648710633371072}
   m_Father: {fileID: 3084486516098798369}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -748,15 +749,68 @@ MonoBehaviour:
   level: 1
   killGems: 5
   gem: {fileID: 1624201923042034702, guid: 783c40e1d4becfb40a204823fd4696a2, type: 3}
-  baseHp: 2
+  baseHp: 10
   maxHp: 0
   hp: 1
+  baseMoveSpeed: 1
+  currentMoveSpeed: 1
   range: 1.34
   damage: 0
-  healthScaleFactor: 1
+  healthScaleFactor: 3
   moneyScaleFactor: 0.5
-  moveSpeed: 1
   healthBar: {fileID: 2091943853}
   levelText: {fileID: 323158665}
   healthText: {fileID: 1328005416}
   debuffManager: {fileID: 4967167842402330099}
+  combatTextObj: {fileID: 2918057210398217738, guid: 81063bb754e995144a68ba4bcee3e01e, type: 3}
+  combatTextAnchor: {fileID: 5239648710633371072}
+  ctm: {fileID: 74913840}
+--- !u!1 &5955704888861854814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5239648710633371072}
+  - component: {fileID: 74913840}
+  m_Layer: 5
+  m_Name: CombatText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5239648710633371072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955704888861854814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1806492030}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1.71}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &74913840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955704888861854814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0600f26924d528e4681d1c2e83481ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 0.2

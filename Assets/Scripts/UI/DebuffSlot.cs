@@ -58,6 +58,7 @@ public class DebuffSlot : MonoBehaviour
     private void Remove()
     {
         dm.activeSlots.Remove(this);
+        dm.debuffs.Remove(debuff);
         debuff.OnExpire(target);
         Destroy(gameObject);
     }
@@ -65,5 +66,11 @@ public class DebuffSlot : MonoBehaviour
     public void AddStacks(int i)
     {
         stacks += i;
+    }
+
+    public void Refresh()
+    {
+        remainingDuration = debuff.duration;
+        amountText.text = remainingDuration.ToString();
     }
 }

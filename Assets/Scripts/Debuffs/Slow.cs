@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Slow", menuName = "Debuffs/Cold")]
+[CreateAssetMenu(fileName = "TimedSlow", menuName = "Debuffs/Timed Slow")]
 public class Slow : Debuff
 {
-    float slowFactor;
+    public float slowFactor;
 
     public override void OnApply(GameObject target)
     {

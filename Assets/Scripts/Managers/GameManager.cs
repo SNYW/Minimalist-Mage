@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -57,6 +58,19 @@ public class GameManager : MonoBehaviour
             }
             spawnManager.ManageSpawn();
         }
+    }
+
+    public List<GameObject> GetAllEnemies()
+    {
+        if (activeEnemies.Count > 0)
+        {
+            return activeEnemies.OrderBy(x => x.transform.position.x).ToList();
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
     public Enemy GetClosestEnemy()
