@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeed3fde1bc3f184ebd45de7d99a2cd2, type: 3}
-  m_Name: IcyRain
+  m_Script: {fileID: 11500000, guid: ade1c00cba8ea2c44b06ca1a93466580, type: 3}
+  m_Name: PyroBlast
   m_EditorClassIdentifier: 
-  name: Icy Rain
-  description: Deal 10 Frost Damage to all Enemies
-  damage: 10
-  uiSprite: {fileID: 21300000, guid: f14703c8e03496c4bbbadaa7bc1f79cd, type: 3}
+  name: PyroBlast
+  description: Deal 20 Fire Damage to the closest enemy
+  damage: 20
+  uiSprite: {fileID: 21300000, guid: ad15d425f4284574da3f517825780caf, type: 3}
   cost: 1

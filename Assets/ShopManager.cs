@@ -49,10 +49,13 @@ public class ShopManager : MonoBehaviour
 
     public void OpenBuyPanel(Spell s)
     {
-        buyPanel.SetActive(true);
-        buySpellName.text = s.name;
-        buySpellDesc.text = s.description;
-        currentBuySpell = s;
+        if (GameManager.gm.economy.CanSpend(s.cost))
+        {
+            buyPanel.SetActive(true);
+            buySpellName.text = s.name;
+            buySpellDesc.text = s.description;
+            currentBuySpell = s;
+        }
     }
 
     public void CloseBuyPanel()
@@ -68,6 +71,7 @@ public class ShopManager : MonoBehaviour
             && GameManager.gm.economy.Spend(s.cost))
         {
             GameManager.gm.spellset.AddToSpellbook(currentBuySpell);
+            CloseBuyPanel();
         }
     }
 }
