@@ -680,7 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tickTime: 1
   activeSlots: []
-  slotObject: {fileID: 7078621319045180976, guid: d74af1af39c9e7847840c100c83e49f0, type: 3}
+  slotObject: {fileID: 2476012704631862017, guid: d74af1af39c9e7847840c100c83e49f0, type: 3}
 --- !u!1 &3084486516098798370
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,15 +752,15 @@ MonoBehaviour:
   baseHp: 10
   maxHp: 0
   hp: 1
-  baseMoveSpeed: 1
+  baseMoveSpeed: 10
   currentMoveSpeed: 1
   range: 1.34
-  damage: 0
+  damage: 10
   healthScaleFactor: 3
   moneyScaleFactor: 0.5
   healthBar: {fileID: 2091943853}
-  levelText: {fileID: 323158665}
   healthText: {fileID: 1328005416}
+  levelText: {fileID: 323158665}
   debuffManager: {fileID: 4967167842402330099}
   combatTextObj: {fileID: 2918057210398217738, guid: 81063bb754e995144a68ba4bcee3e01e, type: 3}
   combatTextAnchor: {fileID: 5239648710633371072}

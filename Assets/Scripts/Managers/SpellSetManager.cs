@@ -21,6 +21,19 @@ public class SpellSetManager : MonoBehaviour
         InitialiseSpellbook();
     }
 
+    public void ResetSpellbook()
+    {
+        foreach(Transform t in spellBookUI.transform)
+        {
+            Destroy(t.gameObject);
+        }
+        spellBook = new List<Spell>();
+        spellBookWindow.SetActive(false);
+        currentSetIndex = 0;
+        SetActiveSpellSet(currentSetIndex);
+        InitialiseSpellbook();
+    }
+
     public Spell GetSpell(int i)
     {
         return spellSlots[i].spell;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -25,8 +23,8 @@ public class Enemy : MonoBehaviour
     private bool canAttack;
     private Animator animator;
     public Image healthBar;
-    public TMP_Text levelText;
     public TMP_Text healthText;
+    public TMP_Text levelText;
     public DebuffManager debuffManager;
     public GameObject combatTextObj;
     public Transform combatTextAnchor;
@@ -80,6 +78,11 @@ public class Enemy : MonoBehaviour
         }
         healthBar.fillAmount = (float)hp / maxHp;
         healthText.text = hp + "/" + maxHp;
+    }
+
+    public virtual void Attack()
+    {
+        Mage.mage.TakeDamage(damage);
     }
 
     public void CreateCombatText(string text)

@@ -5,6 +5,7 @@ public class TimedDot : Debuff
 {
     public bool percentDamage;
     public float damage;
+    public string damageName;
 
     public override void Tick(GameObject target, int stacks)
     {
@@ -15,12 +16,12 @@ public class TimedDot : Debuff
             float dam = enemy.maxHp * damage;
             if (dam < 1) dam = 1;
             enemy.TakeDamage((int)dam);
-            enemy.CreateCombatText("burn! " + (int)dam);
+            enemy.CreateCombatText(damageName+"! " + (int)dam);
         }
         else
         {
             enemy.TakeDamage((int)damage);
-            enemy.CreateCombatText("burn! " + (int)damage);
+            enemy.CreateCombatText(damageName + "! " + (int)damage);
         }
         
     }

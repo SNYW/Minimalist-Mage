@@ -11,4 +11,6 @@ public class Spell : ScriptableObject
     public GameObject effectObject;
 
     public virtual void Cast() { }
+
+
 }
