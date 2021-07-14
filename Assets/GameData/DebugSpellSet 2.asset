@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DebugSpellSet 2
   m_EditorClassIdentifier: 
   spells:
-  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
-  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: e438919fa8d6b0a4b9e745575c9c1096, type: 2}
+  - {fileID: 11400000, guid: e438919fa8d6b0a4b9e745575c9c1096, type: 2}
   - {fileID: 11400000, guid: ee2293e79799b6040b06b78063b1937a, type: 2}
   - {fileID: 11400000, guid: ee2293e79799b6040b06b78063b1937a, type: 2}
-  - {fileID: 11400000, guid: 302aace9b401ed144aa9366b4d06d0fb, type: 2}
+  - {fileID: 11400000, guid: e438919fa8d6b0a4b9e745575c9c1096, type: 2}

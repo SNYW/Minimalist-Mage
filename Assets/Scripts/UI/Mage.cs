@@ -28,6 +28,9 @@ public class Mage : MonoBehaviour
     private Animator animator;
     private CombatTextManager combatText;
 
+    //Spell Casting
+    public Transform projectileCastAnchor;
+
 
     private void Awake()
     {

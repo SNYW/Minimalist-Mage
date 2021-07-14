@@ -38,7 +38,7 @@ public class ShopManager : MonoBehaviour
 
     private void InitialRoll()
     {
-        GameManager.gm.economy.currentMoney -= rerollCost;
+        //GameManager.gm.economy.currentMoney -= rerollCost;
         foreach (ShopSpell s in shopSpellSlots)
         {
             s.SetSpell(availableSpells[Random.Range(0, availableSpells.Count)]);
