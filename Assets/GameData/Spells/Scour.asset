@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e9daa1f229e3342b38cae6dff06176, type: 3}
+  m_Name: Scour
+  m_EditorClassIdentifier: 
+  name: Scour
+  description: Inflict [BURN] on the closest enemy
+  damage: 0
+  uiSprite: {fileID: 21300000, guid: aa03eceaea402dd4f8777f4c3997641b, type: 3}
+  cost: 50
+  debuff: {fileID: 11400000, guid: e5948a0cd0938934a8b0e9ece4edec27, type: 2}
+  maxTargets: 1

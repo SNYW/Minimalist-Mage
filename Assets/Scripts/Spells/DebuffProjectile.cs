@@ -1,24 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DebuffProjectile : Projectile
 {
+    public bool applyOnHit;
     public Debuff debuff;
+    public bool continueIfApplied;
 
     protected override void OnHit(Enemy e)
     {
-        
         if (!e.debuffManager.debuffs.Contains(debuff))
         {
             e.TakeDamage(damage);
-            e.debuffManager.AddDebuff(debuff, e.gameObject);
+            if (applyOnHit)
+            {
+                e.debuffManager.AddDebuff(debuff, e.gameObject);
+            }
             Destroy(gameObject);
         }
         else
         {
             e.TakeDamage(damage);
-            damage -= damage / 2;
+            if (!continueIfApplied)
+            {
+                Destroy(gameObject);
+            }
+            
         }
         Destroy(gameObject, 3);
     }

@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38bf74e5a9738549a242a658fb40a29, type: 3}
+  m_Script: {fileID: 11500000, guid: 59144df9028611e4fa1b233868b3d6ba, type: 3}
   m_Name: PyroBlast
   m_EditorClassIdentifier: 
   name: Pyroblast
-  description: Deals 20 Damage
+  description: Deal 20 damage and inflict [burn] on the first two enemies hit
   damage: 20
-  uiSprite: {fileID: 21300000, guid: ad15d425f4284574da3f517825780caf, type: 3}
-  cost: 1
-  effectObject: {fileID: 0}
-  maxTargets: 1
+  uiSprite: {fileID: 21300000, guid: efc5d3c04947a7647bb08d3296e7b9cc, type: 3}
+  cost: 300
+  projectile: {fileID: 959506141600345213, guid: f0fdb0219673c5e44a7e8507c1385a99, type: 3}

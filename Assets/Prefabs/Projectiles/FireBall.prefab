@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 959506141600345215}
   - component: {fileID: 959506141600345184}
   - component: {fileID: 1259023406}
-  - component: {fileID: -7332870106581917682}
+  - component: {fileID: 1951859451736955289}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -71,7 +71,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-7332870106581917682
+--- !u!114 &1951859451736955289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,9 +83,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3155b8f3c3bd68049bd166f8dce6fde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   currentMoveSpeed: 6
+  applyOnHit: 0
   debuff: {fileID: 11400000, guid: e5948a0cd0938934a8b0e9ece4edec27, type: 2}
+  continueIfApplied: 1
+  continueMax: 10
 --- !u!1 &6725932754172256667
 GameObject:
   m_ObjectHideFlags: 0

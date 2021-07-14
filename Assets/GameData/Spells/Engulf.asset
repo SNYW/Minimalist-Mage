@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59144df9028611e4fa1b233868b3d6ba, type: 3}
-  m_Name: Fireball
+  m_Script: {fileID: 11500000, guid: 04e9daa1f229e3342b38cae6dff06176, type: 3}
+  m_Name: Engulf
   m_EditorClassIdentifier: 
-  name: Fireball
-  description: Shoots a ball of fire that deals 5 damage, if the target is burning
-    it continues.
-  damage: 5
+  name: Engulf
+  description: Inflict [BURN] on all enemies
+  damage: 0
   uiSprite: {fileID: 21300000, guid: aeca726ca08cb5f43a4e1e48c473b5c0, type: 3}
-  cost: 50
-  projectile: {fileID: 959506141600345213, guid: ba030ce620003164c9a7872a770f3c3e, type: 3}
+  cost: 200
+  debuff: {fileID: 11400000, guid: e5948a0cd0938934a8b0e9ece4edec27, type: 2}
+  maxTargets: 99999
